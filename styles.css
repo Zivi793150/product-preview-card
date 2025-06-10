@@ -1,0 +1,129 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+}
+
+.product-image {
+    width: 100%;
+    height: 240px;
+    background-image: url('./images/image-product-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.product-content {
+    padding: 1.5rem;
+}
+
+.product-category {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: hsl(228, 12%, 48%);
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+}
+
+.product-title {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    color: hsl(212, 21%, 14%);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.product-description {
+    color: hsl(228, 12%, 48%);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.current-price {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+}
+
+.original-price {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 0.875rem;
+}
+
+.add-to-cart {
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: hsl(158, 36%, 20%);
+}
+
+.attribution {
+    position: fixed;
+    bottom: 1rem;
+    font-size: 0.75rem;
+    text-align: center;
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .card {
+        display: flex;
+        max-width: 600px;
+    }
+
+    .product-image {
+        width: 50%;
+        height: auto;
+        background-image: url('./images/image-product-desktop.jpg');
+    }
+
+    .product-content {
+        width: 50%;
+        padding: 2rem;
+    }
+}
